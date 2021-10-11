@@ -1,11 +1,10 @@
-const a = {
-  "a" : 5,
-  "b" : 2,
-  "2" : 'lo',
-};
-  
-let out = '';
-for (let key in a) {
-  out += 'Ключ - '+ key + ', значение - ' + a[key] + '\n';
+let map = new Map([
+  ['one', 1],
+  ['two', 2],
+  ['three', 3],
+  ]);
+
+for (const [key, value] of map) {
+  console.log(`Ключ — ${key}, значение — ${value};`)
 }
-console.log(out);
+
