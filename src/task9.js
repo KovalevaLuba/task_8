@@ -1,4 +1,4 @@
-let arr = [1, 4, 8, 9, 16, 42];
+let arr = [1, 4, 8, 9, 16, 42, 0];
 
 count(arr);
 
@@ -7,14 +7,17 @@ function count(arr) {
   let evenAmount = 0;
   let nullAmount = 0;
 
+  
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      evenAmount++;
-    } else if (arr[i] / 1 === 0) {
+    if (arr[i] === 0) {
       nullAmount++;
-    } else {
+    } else if (arr[i] %2 === 0 && arr[i] !== 0){
+      evenAmount++;
+    }
+      else {
       oddAmount++;
     }
+
   }
   console.log("нулей: " + nullAmount);
   console.log("нечетных : " + oddAmount);
